@@ -22,8 +22,7 @@
 
 ## Скриншоты
 
-![ui](docs/screenshot_ui.png)
-![editor](docs/screenshot_editor.png)
+![menu](docs/screenshot_menu.png)
 
 ---
 
@@ -32,7 +31,7 @@
 1. Установите [LOVE2D](https://love2d.org/) (рекомендуется версия 11.4+).
 2. Клонируйте репозиторий:
     ```bash
-    git clone https://github.com/yourname/tabletop-game-creator.git
+    git clone https://github.com/kirdmya/BoardGameMaker.git
     cd tabletop-game-creator
     ```
 3. Запустите приложение:
@@ -41,7 +40,6 @@
     ```bash
     love .
     ```
-4. Ознакомьтесь с примерами в папке `/examples/`.
 
 ---
 
@@ -49,7 +47,7 @@
 
 - [Руководство пользователя](docs/USAGE.md)
 - [Документация для разработчиков](docs/DEVELOP.md)
-- [Архитектура приложения (Google Drive)](https://drive.google.com/your-architecture-link)
+- [Архитектура приложения (Google Drive)](https://drive.google.com/file/d/1NGn5jJ0iJ0-tImD68ZDAlXl-6SXQmU9M/view?usp=sharing)
 - [Полное API и тесты](docs/API.md)
 - [FAQ](docs/FAQ.md)
 
