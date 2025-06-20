@@ -58,9 +58,9 @@ function test.load()
     deck:shuffle()
 
     local sw, sh = love.graphics.getWidth(), love.graphics.getHeight()
-    local btnW, btnH = 220, 48
-    local y = sh * 0.78
-    local btnX = sw/2 - btnW/2
+    local btnW, btnH = 320, 48
+    local y = sh * 0.78 - 50
+    local btnX = sw/2 + btnW/2
 
     table.insert(buttons, Button.new("Взять карту", btnX, y, btnW, btnH, function()
         local p = players[current_player]
@@ -117,7 +117,7 @@ function test.draw()
         local y = y0 + (pidx-1)*180
         love.graphics.setFont(Fonts.normal)
         love.graphics.setColor(1,1,1)
-        love.graphics.printf(p.name .. " (рука):", 40, y-30, 240, "left")
+        love.graphics.printf(p.name .. " (рука):", 40, y-50, 240, "left")
         for i, card in ipairs(p.hand) do
             local sprite
             if pidx == current_player then
@@ -141,7 +141,7 @@ function test.draw()
 
 
     local deck_x = sw - 340
-    local deck_y = sh*0.44
+    local deck_y = sh*0.28
     local deck_card = deck.cards[#deck.cards]
     local deck_sprite = get_sprite(deck_card and deck_card:get_sprite_name() or "card_back")
     love.graphics.setColor(1,1,1)
@@ -151,7 +151,7 @@ function test.draw()
     love.graphics.printf(deck.name.." ("..#deck.cards..")", deck_x-24, deck_y+140, 180, "center")
 
     local discard_x = sw - 180
-    local discard_y = sh*0.44
+    local discard_y = sh*0.28
     local top_discard = discard.items[#discard.items]
     local discard_sprite = get_sprite(top_discard and top_discard:get_sprite_name() or "card_empty")
     love.graphics.setColor(1,1,1)

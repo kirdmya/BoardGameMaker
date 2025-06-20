@@ -45,7 +45,7 @@ function demo.load()
 
     btnReset = Button.new(
         I18N.t("devui.checkbox_reset_btn"),
-        sw/2 + 60, sh * 0.32 + 180, 200, 48,
+        sw/2 - 150, sh * 0.32 + 180, 300, 48,
         function()
             for _, cb in ipairs(checkboxes) do
                 cb:setChecked(false)
@@ -72,7 +72,7 @@ function demo.draw()
 
     love.graphics.setFont(Fonts.small)
     love.graphics.setColor(0.74, 0.95, 1)
-    love.graphics.printf(I18N.t("devui.checkbox_hint"), 0, sh*0.32 - 36, sw, "center")
+    love.graphics.printf(I18N.t("devui.checkbox_hint"), 0, sh*0.32 - 50, sw, "center")
     love.graphics.setColor(1, 1, 1)
 
     for _, cb in ipairs(checkboxes) do
