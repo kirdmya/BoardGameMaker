@@ -92,7 +92,7 @@ function game.load()
         generate_grid()
     end, {font=Fonts.normal}))
 
-    difficulty_dropdown = Dropdown.new(60, 56, 180, 42, {"4 пары", "6 пар", "8 пар", "10 пар", "12 пар"}, 3)
+    difficulty_dropdown = Dropdown.new(60, 150, 200, 42, {"4 пары", "6 пар", "8 пар", "10 пар", "12 пар"}, 3)
     difficulty_dropdown:setOnChange(function(_, idx)
         local opts = {4,6,8,10,12}
         num_pairs = opts[idx] or 8
@@ -101,7 +101,7 @@ function game.load()
         generate_grid()
     end)
 
-    slider = Slider.new(60, 120, 180, 32, 85, function(val) end)
+    slider = Slider.new(60, 400, 180, 32, 85, function(val) end)
 end
 
 function game.update(dt)
@@ -167,8 +167,8 @@ function game.draw()
 
     love.graphics.setFont(Fonts.normal)
     love.graphics.setColor(0.85, 0.98, 1)
-    love.graphics.printf("Сложность:", 60, 30, 180, "left")
-    love.graphics.printf("Размер карты:", 60, 100, 180, "left")
+    love.graphics.printf("Сложность:", 60, 100, 180, "left")
+    love.graphics.printf("Размер карты:", 60, 300, 180, "left")
 
     for _, btn in ipairs(buttons) do btn:draw() end
     difficulty_dropdown:drawBox()
