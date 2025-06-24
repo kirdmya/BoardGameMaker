@@ -1,4 +1,4 @@
-# Cross-Platform Tabletop Game Creator
+# Board Game Creator
 
 ![arch](docs/architecture.png)
 
