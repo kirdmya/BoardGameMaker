@@ -22,7 +22,7 @@
 
 ## Скриншоты
 
-![menu](docs/screenshot_menu.png)
+![menu](docs/test_core.png)
 
 ---
 
