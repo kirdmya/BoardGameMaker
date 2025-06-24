@@ -136,7 +136,7 @@ core_engine.add_rule {
 
 ### ❓ Где задать вопрос или оставить фидбэк?
 
-Создайте issue на GitHub
+Создайте issue на GitHub.
 
 ---
 
