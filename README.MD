@@ -1,5 +1,11 @@
 # Board Game Creator
 
+[![LOVE2D](https://img.shields.io/badge/engine-love2d-ff69b4?logo=love&logoColor=white)](https://love2d.org/)
+![Lua](https://img.shields.io/badge/language-Lua-blue?logo=lua)
+![Platform](https://img.shields.io/badge/platform-Win%20%7C%20Linux%20%7C%20macOS%20%7C%20Android%20%7C%20iOS-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+
 ![arch](docs/architecture.png)
 
 **Кроссплатформенное приложение для создания, прототипирования и тестирования настольных игр.**  
