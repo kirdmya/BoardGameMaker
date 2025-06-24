@@ -32,7 +32,7 @@
 2. Клонируйте репозиторий:
     ```bash
     git clone https://github.com/kirdmya/BoardGameMaker.git
-    cd tabletop-game-creator
+    cd BoardGameMaker
     ```
 3. Запустите приложение:
     - Перетащите папку проекта на иконку LOVE2D  
