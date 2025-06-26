@@ -14,7 +14,7 @@ function demo.load()
     local sw, sh = love.graphics.getWidth(), love.graphics.getHeight()
     logMsg = ""
     tabbar = TabBar.new(
-        sw/2 - 210, sh*0.25, 420,
+        sw/2 - 420, sh*0.25, 840,
         {
             I18N.t("devui.tabbar_tab1"),
             I18N.t("devui.tabbar_tab2"),
@@ -22,7 +22,7 @@ function demo.load()
         },
         {
             selected = 2,
-            tabH = 48,
+            tabH = 86,
             font = Fonts.normal,
             onChange = function(idx, name)
                 logMsg = (I18N.getLanguage() == "ru" and "Выбрана вкладка: " or "Selected tab: ") .. tostring(name)
@@ -32,7 +32,7 @@ function demo.load()
 
     btnBack = Button.new(
         I18N.t("settings.back"),
-        sw/2-60, sh*0.25+80, 120, 44,
+        sw/2-60, sh*0.25+200, 120, 44,
         function() sceneManager.load("devui_components") end,
         {font = Fonts.normal}
     )
