@@ -28,15 +28,15 @@ function dice_multi_test.load()
     load_dice_sprites()
     local sw, sh = love.graphics.getWidth(), love.graphics.getHeight()
     local btnW, btnH = 220, 48
-    local btnX = sw/2 - btnW/2
-    local y = sh*0.78
+    local btnX = sw/2 - btnW/2 
+    local y = sh*0.68
 
     for i = 1, 3 do
         dice_list[i] = Dice.new("D" .. i)
         animators[i] = DiceAnimator.new(dice_list[i])
     end
 
-    table.insert(buttons, Button.new("Бросить все кубики", btnX, y, btnW, btnH, function()
+    table.insert(buttons, Button.new("Бросить", btnX, y, btnW, btnH, function()
         for i, anim in ipairs(animators) do
             anim:start(function(value)
                 Logger.log(string.format("Кубик #%d выпал: %s", i, tostring(value)))
@@ -44,7 +44,7 @@ function dice_multi_test.load()
         end
     end, { font = Fonts.normal }))
 
-    table.insert(buttons, Button.new("Сбросить все", btnX, y+btnH+16, btnW, btnH, function()
+    table.insert(buttons, Button.new("Сбросить", btnX, y+btnH+16, btnW, btnH, function()
         for i, dice in ipairs(dice_list) do
             dice:reset()
             animators[i].animating = false
@@ -78,10 +78,10 @@ function dice_multi_test.draw()
         love.graphics.draw(sprite, x, y, 0, 2, 2)
         love.graphics.setFont(Fonts.small)
         love.graphics.setColor(0.85,0.9,1)
-        love.graphics.printf(dice.name, x, y + 128, 128, "center")
+        love.graphics.printf(dice.name, x - 50, y + 100, 128, "center")
         if dice.state == "rolled" then
             love.graphics.setColor(0.8,1,0.8)
-            love.graphics.printf("Выпало: " .. tostring(dice.value), x, y + 146, 128, "center")
+            love.graphics.printf("Выпало: " .. tostring(dice.value), x - 40, y + 146, 128, "center")
         end
     end
 
