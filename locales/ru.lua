@@ -67,7 +67,7 @@ return {
         radiobutton_selected = "Выбрано: ",
         radiobutton_onchange = "onChange: ",
 
-        dropdown = "Выпадающий список",
+        dropdown = "Список",
         dropdown_demo_title = "Выпадающий список — Демонстрация",
         dropdown_lang = "Язык",
         dropdown_difficulty = "Сложность",
@@ -90,7 +90,7 @@ return {
         textinput_num_log = "Число изменено: ",
         textinput_cleared = "Поля очищены.",
 
-        colorpicker = "Color Picker",
+        colorpicker = "Палитра цвета",
         colorpicker_demo_title = "Выбор цвета",
         colorpicker_log = "Текущий цвет: R=%d G=%d B=%d A=%d",
         colorpicker_copy_btn = "HEX в лог",
@@ -106,7 +106,7 @@ return {
         listview_clear = "Очистить список",
         listview_scroll_tip = "Прокрутите для просмотра",
 
-        tabbar = "Tab bar",
+        tabbar = "Меню tab",
         tabbar_tab1 = "Обзор",
         tabbar_tab2 = "Настройки",
         tabbar_tab3 = "О приложении",

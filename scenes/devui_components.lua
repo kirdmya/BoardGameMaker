@@ -17,7 +17,6 @@ local components = {
     {key = "listview"},
     {key = "tabbar"},
     {key = "tooltip"},
-    {key = "progressbar"},
 }
 
 local buttons = {}
