@@ -36,7 +36,7 @@ function demo.load()
 
     btnClear = Button.new(
         I18N.t("devui.textinput_clear_btn"),
-        sw/2 - 80, sh*0.28 + 140, 160, 40,
+        sw/2 - 125, sh*0.28 + 140, 250, 40,
         function()
             input:setText("")
             inputNum:setText("")
