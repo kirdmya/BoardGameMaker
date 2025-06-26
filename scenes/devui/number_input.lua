@@ -21,7 +21,7 @@ function demo.load()
 
     btnMin = Button.new(
         I18N.t("devui.number_input_min"),
-        sw/2 + 44, sh/2 - 32, 90, 48,
+        sw/2 + 44, sh/2 - 32, 150, 48,
         function()
             input.value = "0"
             input.lastValid = "0"
@@ -33,7 +33,7 @@ function demo.load()
 
     btnMax = Button.new(
         I18N.t("devui.number_input_max"),
-        sw/2 + 44, sh/2 + 24, 90, 48,
+        sw/2 + 44, sh/2 + 24, 150, 48,
         function()
             input.value = "100"
             input.lastValid = "100"
