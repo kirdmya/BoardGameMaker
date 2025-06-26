@@ -114,7 +114,7 @@ return {
 
         tooltip = "Подсказка",
         tooltip_demo_title = "Демо подсказки",
-        tooltip_btn1 = "Инфо-кнопка",
+        tooltip_btn1 = "Инфо",
         tooltip_btn2 = "Внимание",
         tooltip_text_info = "Это информационная кнопка.\nПодсказка появится через 1 секунду.",
         tooltip_text_warn = "Это предупреждающая кнопка!\nПодсказка появится не сразу.",
