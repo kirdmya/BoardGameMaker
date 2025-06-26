@@ -1,4 +1,3 @@
--- scenes/devui/button.lua
 local sceneManager = require("utils.scene_manager")
 local I18N = require("locales")
 local Fonts = require("assets.fonts")
@@ -23,7 +22,7 @@ function example.load()
     table.insert(buttons, Button.new(
         I18N.t("devui.button_default"),
         sw/2 - btnW/2,
-        sh * 0.23,
+        sh * 0.23 + 50,
         btnW,
         btnH,
         function()
@@ -36,7 +35,7 @@ function example.load()
     table.insert(buttons, Button.new(
         I18N.t("devui.button_colored"),
         sw/2 - btnW/2,
-        sh * 0.23 + 90,
+        sh * 0.23 + 140,
         btnW,
         btnH,
         function()
@@ -59,7 +58,7 @@ function example.load()
     table.insert(buttons, Button.new(
         I18N.t("devui.button_disable_toggle"),
         sw/2 - btnW/2,
-        sh * 0.23 + 180,
+        sh * 0.23 + 230,
         btnW,
         btnH,
         function()
@@ -91,7 +90,7 @@ function example.draw()
     love.graphics.setColor(0.7, 0.93, 1)
     love.graphics.printf(I18N.t("devui.button_hint"), 0, sh*0.23 - 34, sw, "center")
     love.graphics.setColor(1, 1, 1)
-    love.graphics.printf(lastEvent, 0, sh*0.23 + 280, sw, "center")
+    love.graphics.printf(lastEvent, 0, sh*0.23 + 400, sw, "center")
 
     love.graphics.setFont(Fonts.small)
     love.graphics.setColor(0.72, 0.72, 0.82)
