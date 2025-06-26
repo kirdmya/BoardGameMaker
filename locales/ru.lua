@@ -59,11 +59,11 @@ return {
 
         radiobutton = "Переключатель",
         radiobutton_demo_title = "Демонстрация RadioButton",
-        radiobutton_choose = "Выберите сложность:",
-        radiobutton_easy = "Легко",
-        radiobutton_medium = "Средне",
-        radiobutton_hard = "Сложно",
-        radiobutton_set_medium = "Сделать Средне",
+        radiobutton_choose = "Выберите уровень сложности:",
+        radiobutton_easy = "Легкий",
+        radiobutton_medium = "Средний",
+        radiobutton_hard = "Сложный",
+        radiobutton_set_medium = "Сделать Средний",
         radiobutton_selected = "Выбрано: ",
         radiobutton_onchange = "onChange: ",
 

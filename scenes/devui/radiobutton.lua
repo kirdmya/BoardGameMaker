@@ -26,7 +26,7 @@ function demo.load()
 
     btnSetMedium = Button.new(
         I18N.t("devui.radiobutton_set_medium"),
-        sw/2 + 60, sh/2 - 10, 140, 44,
+        sw/2 + 120, sh/2 - 10, 200, 44,
         function()
             group:select("medium")
             lastLog = I18N.t("devui.radiobutton_onchange") .. "medium"
@@ -47,14 +47,14 @@ function demo.draw()
     love.graphics.printf(I18N.t("devui.radiobutton_demo_title"), 0, 48, sw, "center")
 
     love.graphics.setFont(Fonts.normal)
-    love.graphics.printf(I18N.t("devui.radiobutton_choose"), sw/2 - 160, sh/2 - 98, 320, "left")
+    love.graphics.printf(I18N.t("devui.radiobutton_choose"), sw/2 - 160, sh/2 - 150, 320, "left")
 
     group:draw()
     btnSetMedium:draw()
 
     love.graphics.setFont(Fonts.small)
     love.graphics.setColor(1, 1, 1)
-    love.graphics.printf(I18N.t("devui.radiobutton_selected") .. tostring(group:getValue()), 0, sh/2 + 70, sw, "center")
+    love.graphics.printf(I18N.t("devui.radiobutton_selected") .. tostring(group:getValue()), 0, sh/2 + 150, sw, "center")
     love.graphics.setColor(0.7, 0.7, 1)
     love.graphics.printf(lastLog or "", 0, sh/2 + 100, sw, "center")
 
