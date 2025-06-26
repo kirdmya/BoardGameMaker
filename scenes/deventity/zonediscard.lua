@@ -52,15 +52,15 @@ local buttons = {}
 
 function test.init_buttons(sw, sh)
     buttons = {}
-    local btnW, btnH = 180, 44
+    local btnW, btnH = 220, 40
     local btnX = sw - 240
-    local y = sh * 0.22
+    local y = sh * 0.50
 
-    table.insert(buttons, Button.new("Перемешать колоду", btnX, y, btnW, btnH, function()
+    table.insert(buttons, Button.new("Перемешать", btnX, y, btnW, btnH, function()
         deck_anim:start()
     end, { font = Fonts.normal }))
 
-    table.insert(buttons, Button.new("Взять карту из колоды", btnX, y + btnH + 16, btnW, btnH, function()
+    table.insert(buttons, Button.new("Взять карту", btnX, y + btnH + 16, btnW, btnH, function()
         if not deck_anim:is_active() and #deck.cards > 0 then
             local c = deck:draw()
             c:set_face(false)               
@@ -75,7 +75,7 @@ function test.init_buttons(sw, sh)
     end, { font = Fonts.normal }))
 
 
-    table.insert(buttons, Button.new("Сбросить все со стола", btnX, y + 2 * (btnH + 16), btnW, btnH, function()
+    table.insert(buttons, Button.new("Сбросить все", btnX, y + 2 * (btnH + 16), btnW, btnH, function()
         for i = #zone.items, 1, -1 do
             local card = zone.items[i]
             flip_anims[card] = CardFlipAnimator.new(card, 0.5)
@@ -89,7 +89,7 @@ function test.init_buttons(sw, sh)
         end
     end, { font = Fonts.normal }))
 
-    table.insert(buttons, Button.new("Перемешать сброс и вернуть в колоду", btnX, y + 3 * (btnH + 16), btnW, btnH, function()
+    table.insert(buttons, Button.new("Перемешать", btnX, y + 3 * (btnH + 16), btnW, btnH, function()
         while #discard.items > 0 do
             local c = discard:take()
             c:set_face(false)
@@ -181,7 +181,7 @@ function test.draw()
     local zone_x, zone_y = sw/2, sh*0.40
     local spread = 90
     for i, card in ipairs(zone.items) do
-        local cx = zone_x + (i-1.5)*spread
+        local cx = zone_x - 200 + (i-1.5)*spread
         local sprite = get_sprite(card:get_sprite_name())
         love.graphics.push()
         love.graphics.translate(cx, zone_y)
@@ -198,7 +198,7 @@ function test.draw()
 
     local hand_y = sh*0.75
     for i, card in ipairs(hand.items) do
-        local cx = sw/2 + (i-1.5)*spread
+        local cx = sw/2 - 200 + (i-1.5)*spread
         local scale = hover_scales[i] or 1
         local sprite = get_sprite(card:get_sprite_name())
         local offset_y = 0
