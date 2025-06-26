@@ -35,7 +35,7 @@ function card_test.load()
     local sw, sh = love.graphics.getWidth(), love.graphics.getHeight()
     local btnW, btnH = 220, 48
     local btnX = sw/2 - btnW/2
-    local y = sh*0.74
+    local y = sh*0.66
 
     table.insert(buttons, Button.new("Flip", btnX, y, btnW, btnH, function()
         if not flip_anim:is_flipping() then
