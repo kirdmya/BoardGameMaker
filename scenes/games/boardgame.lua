@@ -321,7 +321,7 @@ function game.mousereleased(x, y, button)
 end
 function game.keypressed(key)
     if key == "escape" then
-        sceneManager.load("games_list")
+        sceneManager.load("games/game_list")
     end
 end
 function game.textinput(t) end

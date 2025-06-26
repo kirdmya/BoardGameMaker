@@ -271,7 +271,7 @@ end
 
 function game.keypressed(key)
     if key == "escape" then
-        sceneManager.load("games_list")
+        sceneManager.load("games/game_list")
     end
     difficulty_dropdown:keypressed(key)
     slider:keypressed(key)
