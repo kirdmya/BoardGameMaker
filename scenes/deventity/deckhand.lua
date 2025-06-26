@@ -50,9 +50,9 @@ function test.init_buttons(sw, sh)
     buttons = {}
     local btnW, btnH = 220, 48
     local btnX = sw/2 - btnW/2
-    local y = sh*0.82
+    local y = sh*0.35
 
-    table.insert(buttons, Button.new("Перемешать колоду", btnX, y, btnW, btnH, function()
+    table.insert(buttons, Button.new("Перемешать", btnX, y, btnW, btnH, function()
         deck_anim:start()
     end, { font = Fonts.normal }))
 
@@ -115,7 +115,7 @@ function test.draw()
     love.graphics.setColor(1,1,1)
     love.graphics.printf("Deck & Hand Test", 0, 40, sw, "center")
 
-    local deck_x, deck_y = sw/2 - 240, sh*0.38
+    local deck_x, deck_y = sw/2 - 400, sh*0.2
     local top_card = deck.cards[#deck.cards]
     local deck_sprite = get_sprite(top_card and top_card:get_sprite_name() or "card_back")
     local deck_angle = 0
