@@ -37,7 +37,7 @@ function demo.load()
 
     btnLog = Button.new(
         I18N.t("devui.dropdown_log_btn"),
-        sw/2 - 80, sh*0.28 + 180, 160, 44,
+        sw/2 - 150, sh*0.28 + 180, 300, 44,
         function()
             logMsg = I18N.t("devui.dropdown_selected") ..
                 langDropdown:getSelected() .. ", " .. difficultyDropdown:getSelected()
